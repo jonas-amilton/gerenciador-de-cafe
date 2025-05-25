@@ -7,6 +7,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/', 'welcome');
+
+Route::prefix('coffee')->group(function () {
+    Route::view('/purchases', 'coffee.purchases.index')->name('coffee.purchases.index');
+    Route::view('/consumptions', 'coffee.consumptions.index')->name('coffee.consumptions.index');
+    Route::view('/preparations', 'coffee.preparations.index')->name('coffee.preparations.index');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

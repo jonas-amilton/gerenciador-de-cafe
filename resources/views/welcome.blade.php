@@ -27,7 +27,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Compras de Café</h5>
                         <p class="card-text mb-1">Acompanhe quem comprou café e quando.</p>
-                        <a href="" class="btn btn-primary">Visualizar Compras</a>
+                        <a href="{{ route('coffee.purchases.index') }}" class="btn btn-primary">Visualizar Compras</a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Consumo de Café</h5>
                         <p class="card-text mb-1">Veja quem bebeu café recentemente.</p>
-                        <a href="" class="btn btn-success">Visualizar Consumos</a>
+                        <a href="{{ route('coffee.consumptions.index') }}" class="btn btn-success">Visualizar
+                            Consumos</a>
                     </div>
                 </div>
             </div>
@@ -45,7 +46,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Preparação do Café</h5>
                         <p class="card-text mb-1">Saiba quem preparou o café a cada dia.</p>
-                        <a href="" class="btn btn-warning">Visualizar Preparações</a>
+                        <a href="{{ route('coffee.preparations.index') }}" class="btn btn-warning">Visualizar
+                            Preparações</a>
                     </div>
                 </div>
             </div>
