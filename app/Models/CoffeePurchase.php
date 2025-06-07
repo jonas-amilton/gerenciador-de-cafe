@@ -12,10 +12,15 @@ class CoffeePurchase extends Model
     use HasFactory;
 
     protected $table = 'coffee_purchases';
-    protected $fillable = ['user_id', 'quantity'];
+    protected $fillable = ['user_id', 'quantity', 'purchased_at'];
 
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function getPurchasedAtAttribute($value)
+    {
+        return $value ? \Carbon\Carbon::parse($value)->format('d/m/Y') : null;
     }
 }
