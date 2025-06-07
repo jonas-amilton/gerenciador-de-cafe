@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('coffee_purchases', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->date('purchased_at');
             $table->unsignedInteger('quantity')->default(1);
             $table->timestamps();
         });

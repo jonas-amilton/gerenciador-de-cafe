@@ -20,7 +20,7 @@ class CoffeePurchaseFactory extends Factory
         return [
             'user_id' => User::inRandomOrder()->first()?->id ?? User::factory(),
             'quantity' => $this->faker->numberBetween(1, 5),
-            'created_at' => $this->faker->dateTimeThisMonth(),
+            'purchased_at' => $this->faker->dateTimeThisMonth(),
         ];
     }
 }
