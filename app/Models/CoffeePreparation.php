@@ -21,4 +21,9 @@ class CoffeePreparation extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getFormatedPreparedAt()
+    {
+        return $this->prepared_at ? \Carbon\Carbon::parse($this->prepared_at)->format('d/m/Y') : null;
+    }
 }
