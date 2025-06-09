@@ -23,7 +23,7 @@
                 @foreach ($purchases as $p)
                     <tr>
                         <td>{{ $p->user->name }}</td>
-                        <td>{{ $p->purchased_at }}</td>
+                        <td>{{ $p->getFormatedAttribute($p->purchased_at) }}</td>
                         <td>{{ $p->quantity }}</td>
                         <td>
                             <a href="{{ route('coffee.purchases.edit', $p) }}" class="btn btn-warning btn-sm">Editar</a>
