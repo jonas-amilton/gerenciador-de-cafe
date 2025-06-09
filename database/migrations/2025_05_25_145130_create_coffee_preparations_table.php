@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->date('prepared_at');
+            $table->unsignedInteger('cups_estimated')->default(1);
             $table->timestamps();
         });
     }
