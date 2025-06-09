@@ -20,7 +20,6 @@ class CoffeeConsumptionFactory extends Factory
         return [
             'user_id' => User::inRandomOrder()->first()?->id ?? User::factory(),
             'consumed_at' => $this->faker->dateTimeThisMonth(),
-            'created_at' => now(),
         ];
     }
 }
