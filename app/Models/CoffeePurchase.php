@@ -19,7 +19,7 @@ class CoffeePurchase extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function getPurchasedAtAttribute($value)
+    public function getFormatedAttribute($value)
     {
         return $value ? \Carbon\Carbon::parse($value)->format('d/m/Y') : null;
     }
