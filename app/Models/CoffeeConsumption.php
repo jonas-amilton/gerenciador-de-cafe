@@ -21,8 +21,8 @@ class CoffeeConsumption extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function getFormatedAttribute($value)
+    public function getFormatedConsumedAt()
     {
-        return $value ? \Carbon\Carbon::parse($value)->format('d/m/Y') : null;
+        return $this->consumed_at ? \Carbon\Carbon::parse($this->consumed_at)->format('d/m/Y') : null;
     }
 }

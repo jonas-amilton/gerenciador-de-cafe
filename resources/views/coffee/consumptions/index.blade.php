@@ -22,7 +22,7 @@
                 @foreach ($consumptions as $c)
                     <tr>
                         <td>{{ $c->user->name }}</td>
-                        <td>{{ $c->getFormatedAttribute($c->consumed_at) }}</td>
+                        <td>{{ $c->getFormatedConsumedAt() }}</td>
                         <td>
                             <a href="{{ route('coffee.consumptions.edit', $c) }}" class="btn btn-warning btn-sm">Editar</a>
                             <form action="{{ route('coffee.consumptions.destroy', $c) }}" method="POST" class="d-inline"
