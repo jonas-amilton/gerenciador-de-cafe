@@ -17,8 +17,8 @@
             <ul class="list-disc pl-6 space-y-2">
                 <li><strong>Total comprado:</strong> {{ $totalPurchased }} unidades</li>
                 <li><strong>Maior comprador:</strong> {{ $topBuyer?->name ?? '—' }} ({{ $topBuyerTotal }} unidades)</li>
-                <li><strong>Último a passar café foi:</strong> {{ $lastBrewedBy?->name ?? '—' }} em
-                    {{ $lastBrewedAt?->format('d/m/Y H:i') ?? '—' }}</li>
+                <li><strong>Último a passar café foi:</strong> {{ $lastBrew?->user->name ?? '—' }} em
+                    {{ $lastBrew?->getFormatedPreparedAt() ?? '—' }}</li>
             </ul>
         </div>
     </div>

@@ -23,15 +23,11 @@ class HomeController extends Controller
             ->with('user')
             ->first();
 
-        $lastBrewedBy = $lastBrew?->user;
-        $lastBrewedAt = $lastBrew?->brewed_at;
-
         return view('dashboard', compact(
             'totalPurchased',
             'topBuyer',
             'topBuyerTotal',
-            'lastBrewedBy',
-            'lastBrewedAt',
+            'lastBrew',
         ));
     }
 }
